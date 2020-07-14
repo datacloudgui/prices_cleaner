@@ -21,7 +21,7 @@ You need to have one csv file to clean with the following columns:
 Execute the file calling the .csv file and the date of the data:
 
 ```python
-python3 prices_cleaner.py camaras_2020_07_05 05_07_20
+python3 prices_cleaner.py camaras_2020_07_05_articles.csv 05_07_20
 ```
 # Process
 

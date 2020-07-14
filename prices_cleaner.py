@@ -21,9 +21,11 @@ def main(filename, today):
     
     df = _add_articles_uid_column(df)
 
-    logger.info('Droping rows with NaN values')
+    logger.info('Droping duplicated values')
     df = df.drop_duplicates()
     df = _convert_price_to_number(df, today)
+    #Change the following line if you only use this file, without run the scraper and load stages
+    #Change to df.to_csv('clean_'+filename)
     df.to_csv('clean_'+filename[2::])
 
     return df
